@@ -44,6 +44,30 @@ p {
   align-items: center;
   margin-top: 2rem;
 }
+.btn-primary {
+  background-color: var(--yellow);
+  border: none;
+  color: var(--blue);
+}
+.btn-primary a {
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background-color: #e6ab67;
+  color: black;
+}
+.btn-outline-secondary {
+  background-color: transparent;
+  border: 2px solid;
+  border-color: var(--yellow);
+
+  color: var(--blue);
+}
+.btn-outline-secondary:hover {
+  background-color: #e9e9e9;
+  color: black;
+  border-color: transparent;
+}
 nav {
   background-color: var(--yellow);
 }
@@ -60,11 +84,15 @@ nav {
 }
 .nav-link {
   text-align: center;
+  font-weight: 700;
 }
 
 .section-hero {
   align-items: center;
   height: 600px;
+}
+.carousel {
+  width: 100%;
 }
 .carousel-image {
   border-radius: 120px;
@@ -99,7 +127,29 @@ nav {
     width: 100vw;
     padding: 5% 10%;
   }
-  .section-hero {
-    height: 700px;
+  .carousel-image {
+    border-radius: 120px;
+  }
+}
+@media all and (min-width: 992px) {
+  nav {
+    padding: 0 15%;
+  }
+  .nav-item {
+    margin: 0 1rem;
+  }
+  .section {
+    padding: 5% 15%;
+  }
+  .carousel {
+    width: 60%;
+  }
+}
+@media all and (min-width: 1200px) {
+  h1 {
+    font-size: 8rem;
+  }
+  .carousel {
+    width: 40%;
   }
 }
