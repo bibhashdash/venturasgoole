@@ -121,6 +121,7 @@ nav {
 .hero-social-icon {
   font-size: 2rem;
   margin: 0 1rem;
+  color: var(--blue);
 }
 .section-hours {
   background-color: var(--yellow);
@@ -228,8 +229,12 @@ li:nth-child(odd) {
   .carousel {
     width: 60%;
   }
+  .menu-content,
+  .accordion {
+    width: 70%;
+  }
   .menu-image {
-    width: 50%;
+    width: 100%;
   }
 }
 @media all and (min-width: 1200px) {
