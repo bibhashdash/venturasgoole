@@ -20,7 +20,6 @@ h6 {
   color: var(--blue);
 }
 h1 {
-  font-size: 4rem;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -30,6 +29,8 @@ a {
 }
 p {
   margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 .section {
   height: auto;
@@ -43,6 +44,12 @@ p {
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+}
+.hero-heading {
+  font-size: 4rem;
+}
+.section-heading {
+  font-size: 3rem;
 }
 .btn-primary {
   background-color: var(--yellow);
@@ -89,7 +96,7 @@ nav {
 
 .section-hero {
   align-items: center;
-  height: 600px;
+  height: auto;
 }
 .carousel {
   width: 100%;
@@ -114,6 +121,83 @@ nav {
 .hero-social-icon {
   font-size: 2rem;
   margin: 0 1rem;
+}
+.section-hours {
+  background-color: var(--yellow);
+  align-items: center;
+}
+.white {
+  color: var(--white);
+}
+li:nth-child(odd) {
+  color: var(--white);
+}
+.section-menu {
+  align-items: center;
+}
+.menu-content,
+.accordion {
+  width: 100%;
+}
+.accordion-item {
+  margin: 1rem 0;
+}
+.accordion-button {
+  background-color: transparent;
+  /* border: 1px solid red; */
+
+  background-position: center;
+  background-size: cover;
+  color: var(--yellow);
+  height: 6rem;
+}
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f2a852'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.accordion-button:focus {
+  border: none;
+  box-shadow: none;
+}
+#accordion1 {
+  background: linear-gradient(#00000077, #00000077), url("images/coffee1.jpg");
+}
+
+#accordion2 {
+  background: linear-gradient(#00000077, #00000077), url("images/mains.jpg");
+}
+
+#accordion3 {
+  background: linear-gradient(#00000077, #00000077), url("images/deals.jpg");
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--white);
+}
+.accordion-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-image {
+  width: 100%;
+}
+
+.section-reviews {
+  align-items: center;
+  background-color: var(--yellow);
+}
+.review {
+  margin: 1rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quote {
+  color: var(--white);
 }
 @media all and (min-width: 768px) {
   nav {
@@ -144,9 +228,12 @@ nav {
   .carousel {
     width: 60%;
   }
+  .menu-image {
+    width: 50%;
+  }
 }
 @media all and (min-width: 1200px) {
-  h1 {
+  .hero-heading {
     font-size: 8rem;
   }
   .carousel {
